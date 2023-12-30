@@ -1,8 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-	</main>
+  <main>
+    <section class="w-full mx-auto lg:w-[740px] py-44">
+      <h1 class="text-4xl font-bold text-pretty flex justify-center items-center flex-row gap-x-2 pb-3">
+        Hey, soy Eli Haziel Ortiz Ramirez <Badge> Disponible para trabajar </Badge> <Badge>Con novia</Badge>
+      </h1>
+      <h2>
+        2 años de experiencia creando projectos didácticos. Desarrollador Web.
+        De México, Puebla. Especializado en desarrollo web, principalmente
+        FrontEnd
+      </h2>
+    </section>
+  </main>
 </Layout>
