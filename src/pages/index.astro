@@ -16,11 +16,11 @@ import TimeLine from "../components/TimeLine.astro";
   <main>
     <section
       id="home"
-      class="lg:w-1/2 sm:w-11/12 md:w-8/12 mx-auto pt-44 pb-28 animate-fade-right animate-once animate-duration-500 animate-delay-200 animate-ease-in"
+      class="lg:w-1/2 sm:w-11/12 md:w-8/12 w-11/12 mx-auto pt-44 pb-28 animate-fade-right animate-once animate-duration-500 animate-delay-200 animate-ease-in"
     >
       <div class="pb-5 flex flex-col">
-        <div class="flex gap-3 lg:flex-row sm:flex-col-reverse md:flex-col-reverse sm:mb-5 md:mb-4 lg:justify-center lg:items-center">
-          <h1 class="text-4xl font-bold lg:text-balance md:text-wrap sm:text-wrap w-2/4 sm:w-full md:w-full">
+        <div class="flex gap-3 lg:flex-row sm:flex-col-reverse flex-col-reverse  md:flex-col-reverse  mb-5 lg:mb-0 justify-center items-center md:justify-normal sm:justify-normal lg:items-center">
+          <h1 class="lg:text-4xl md:text-3xl sm:text-2xl text-xl font-bold lg:text-balance text-wrap md:text-wrap sm:text-wrap lg:w-2/4 w-full">
             Hey, soy <span class="text-sky-400/90"
               >Eli Haziel Ortiz Ramirez</span
             >
@@ -28,10 +28,10 @@ import TimeLine from "../components/TimeLine.astro";
           <img
             src="https://avatars.githubusercontent.com/Yayo22124"
             alt="Yayo22124 Photo"
-            class="rounded-full size-1/6 md:size-1/4"
+            class="rounded-full lg:size-1/6 md:size-1/4 size-1/3"
           />
         </div>
-        <div>
+        <div class="flex items-center justify-center md:justify-normal lg:justify-normal sm:justify-normal">
           <a href="https://www.linkedin.com/in/haziel-ortiz/" target="_blank"
             ><Badge>Disponible para trabajar</Badge></a
           >
@@ -49,7 +49,7 @@ import TimeLine from "../components/TimeLine.astro";
 
       <!-- Contact Badges -->
       <ul
-        class="flex items-center justify-center gap-x-5 mt-3 [&>li]:bg-white/5 [&>li]:py-1.5 [&>li]:px-2 text-sm [&>li]:rounded-xl"
+        class="flex w-full flex-wrap items-center justify-center gap-x-5 mt-3 [&>li]:bg-white/5 [&>li]:py-1.5 [&>li]:px-2 text-sm [&>li]:rounded-xl"
       >
         <!-- LinkedIn -->
         <li
