@@ -4,6 +4,7 @@ import Badge from "../components/Badge.astro";
 import OutlookIcon from "../components/icons/Outlook.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import GitLabIcon from "../components/icons/GitLab.astro";
+import BriefCaseIcon from "../components/icons/BriefCaseIcon.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import TimeLine from "../components/TimeLine.astro";
 ---
@@ -14,7 +15,8 @@ import TimeLine from "../components/TimeLine.astro";
 >
   <main>
     <section
-      class="w-full mx-auto lg:w-[740px] pt-36 animate-fade-right animate-once animate-duration-500 animate-delay-200 animate-ease-in"
+      id="home"
+      class="w-full mx-auto lg:w-[740px] pt-44 pb-28 animate-fade-right animate-once animate-duration-500 animate-delay-200 animate-ease-in"
     >
       <div class="pb-5 flex flex-col">
         <div class="flex gap-x-3">
@@ -33,7 +35,8 @@ import TimeLine from "../components/TimeLine.astro";
           <a href="https://www.linkedin.com/in/haziel-ortiz/" target="_blank"
             ><Badge>Disponible para trabajar</Badge></a
           >
-          <Badge>Con novia</Badge>
+          <Badge class="bg-green-500 text-white">Estudiante</Badge>
+          <!-- <Badge class="bg-red-500 text-white">Con novia</Badge> -->
         </div>
       </div>
       <h2 class="text-blue-100/90 text-md text-pretty">
@@ -100,8 +103,12 @@ import TimeLine from "../components/TimeLine.astro";
     </section>
     <!--! TimeLine Section -->
     <section
+      id="experience"
       class="w-full mx-auto lg:w-[740px] py-44 animate-fade-left animate-once animate-duration-500 animate-delay-200 animate-ease-in"
     >
+      <h2 class="flex items-center gap-x-2 text-3xl font-semibold mb-6">
+        <BriefCaseIcon/> Mi Trayectoria
+      </h2>
       <TimeLine />
     </section>
   </main>
