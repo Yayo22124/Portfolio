@@ -1,38 +1,114 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import OutlookIcon from "../components/icons/Outlook.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import GitLabIcon from "../components/icons/GitLab.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import TimeLine from "../components/TimeLine.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+  title="Portafolio | Eli Haziel Ortiz (Yayo22124)."
+  description="Portafolio de Eli Haziel Ortiz (Yayo22124). Estudiante de T.S.U y Desarrollador Web con 2 años de experiencia en proyectos didácticos."
+>
   <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44 animate-fade-right animate-once animate-duration-500 animate-delay-200 animate-ease-in">
+    <section
+      class="w-full mx-auto lg:w-[740px] pt-36 animate-fade-right animate-once animate-duration-500 animate-delay-200 animate-ease-in"
+    >
       <div class="pb-5 flex flex-col">
-		<div class="flex gap-x-3">
-			<h1 class="text-4xl font-bold text-pretty w-2/4">
-			  Hey, soy <span class="text-sky-400/90">Eli Haziel Ortiz Ramirez</span>
-			</h1>
-			<img
-			src="https://avatars.githubusercontent.com/Yayo22124"
-			alt="Yayo22124 Photo"
-			class="rounded-full w-1/6 h-1/6"
-		  />		
-		</div>
-		<div>
-			<a href="https://www.linkedin.com/in/haziel-ortiz/" target="_blank"
-			  ><Badge>Disponible para trabajar</Badge></a
-			>
-			<Badge>Con novia</Badge>
-		</div>
+        <div class="flex gap-x-3">
+          <h1 class="text-4xl font-bold text-pretty w-2/4">
+            Hey, soy <span class="text-sky-400/90"
+              >Eli Haziel Ortiz Ramirez</span
+            >
+          </h1>
+          <img
+            src="https://avatars.githubusercontent.com/Yayo22124"
+            alt="Yayo22124 Photo"
+            class="rounded-full size-1/6"
+          />
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/haziel-ortiz/" target="_blank"
+            ><Badge>Disponible para trabajar</Badge></a
+          >
+          <Badge>Con novia</Badge>
+        </div>
       </div>
-      <h2 class="text-blue-100/90">
-        Estudiante de T.S.U. en <span class="text-sky-300/80 font-semibold">Desarrollo de Software Multiplataforma</span>. 2 años de experiencia en proyectos didácticos y escolares. <span class="text-custom">Desarrollador Web especializado en FrontEnd</span>. Desde <span>México, Puebla.</span>
+      <h2 class="text-blue-100/90 text-md text-pretty">
+        Estudiante de T.S.U. en <span class="text-sky-300/90 font-semibold"
+          >Desarrollo de Software Multiplataforma</span
+        >. 2 años de experiencia en proyectos didácticos y escolares. <span
+          class="text-custom">Desarrollador Web especializado en FrontEnd</span
+        >. Desde <span>México, Puebla.</span>
       </h2>
+
+      <!-- Contact Badges -->
+      <ul
+        class="flex items-center justify-center gap-x-5 mt-3 [&>li]:bg-white/5 [&>li]:py-1.5 [&>li]:px-2 text-sm [&>li]:rounded-xl"
+      >
+        <!-- LinkedIn -->
+        <li
+          class="hover:scale-110 transition hover:bg-white/10 active:scale-95 flex items-center justify-center"
+        >
+          <a
+            href="mailto:ya-yo22124@outlook.com"
+            class="flex gap-2 items-center justify-center"
+          >
+            <LinkedInIcon class="size-6" />
+            <span>LinkedIn</span>
+          </a>
+        </li>
+        <!-- GitHub -->
+        <li
+          class="hover:scale-110 transition hover:bg-white/10 active:scale-95 flex items-center justify-center"
+        >
+          <a
+            href="mailto:ya-yo22124@outlook.com"
+            class="flex gap-2 items-center justify-center"
+          >
+            <GitHubIcon class="size-6" />
+            <span>GitHub</span>
+          </a>
+        </li>
+        <!-- GitLab -->
+        <li
+          class="hover:scale-110 transition hover:bg-white/10 active:scale-95 flex items-center justify-center"
+        >
+          <a
+            href="mailto:ya-yo22124@outlook.com"
+            class="flex gap-2 items-center justify-center"
+          >
+            <GitLabIcon class="size-6" />
+            <span>GitLab</span>
+          </a>
+        </li>
+        <!-- Outlook -->
+        <li
+          class="hover:scale-110 transition hover:bg-white/10 active:scale-95 flex items-center justify-center"
+        >
+          <a
+            href="mailto:ya-yo22124@outlook.com"
+            class="flex gap-2 items-center justify-center"
+          >
+            <OutlookIcon class="size-6" />
+            <span>ya-yo22124@outlook.com</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!--! TimeLine Section -->
+    <section
+      class="w-full mx-auto lg:w-[740px] py-44 animate-fade-left animate-once animate-duration-500 animate-delay-200 animate-ease-in"
+    >
+      <TimeLine />
     </section>
   </main>
 </Layout>
 
 <style>
-	.text-custom {
-		text-decoration: underline wavy skyblue;
-	}
+  .text-custom {
+    text-decoration: underline wavy skyblue;
+  }
 </style>
