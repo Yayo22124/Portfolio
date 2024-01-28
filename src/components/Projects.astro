@@ -17,17 +17,17 @@ import GitLab from "./icons/GitLab.astro";
 const TAGS: any = {
   TAILWIND: {
     name: "TailwindCSS",
-    class: "bg-sky-300/20 text-cyan-600",
+    class: "bg-sky-300/20 dark:bg-cyan-500/30 dark:text-white text-cyan-600",
     icon: TailwindCssIcon,
   },
   ANGULAR_15: {
     name: "Angular 15",
-    class: " text-black",
+    class: "text-black bg-white dark:bg-red-500/30 dark:text-white",
     icon: AngularIcon,
   },
   ANGULAR_17: {
     name: "Angular 17",
-    class: "bg-gradient-to-r from-rose-500 via-fuchsia-500 to-purple-800 text-transparent bg-clip-text",
+    class: "bg-gradient-to-r from-rose-500 via-fuchsia-500 to-purple-800 text-transparent bg-clip-text dark:bg-white",
     icon: AngularIcon,
   },
   JQUERY: {
@@ -37,17 +37,17 @@ const TAGS: any = {
   },
   SASS: {
     name: "Sass",
-    class: "bg-rose-300/10 text-rose-700/80",
+    class: "bg-rose-300/10 dark:bg-rose-500/20 text-[#bf4080]",
     icon: SassIcon,
   },
   ASTRO: {
     name: "Astro 4.0",
-    class: "bg-black/80 text-white",
+    class: "bg-black/80 text-white dark:bg-black/60",
     icon: AstroIcon,
   },
   NODE: {
     name: "Node.js",
-    class: "bg-green-400/20 text-green-800",
+    class: "bg-green-400/20 text-green-800 dark:text-white",
     icon: NodeIcon,
   },
   EXPRESS: {
@@ -57,12 +57,12 @@ const TAGS: any = {
   },
   MYSQL: {
     name: "MySQL",
-    class: "bg-blue-500/10 text-orange-500",
+    class: "bg-blue-500/10 dark:bg-blue-400/20 dark:text-orange-400 text-orange-500",
     icon: MySQLIcon,
   },
   SEQUELIZE: {
     name: "Sequelize",
-    class: "bg-blue-400/30 text-black",
+    class: "bg-blue-400/30 text-black dark:text-white",
     icon: SequelizeIcon,
   },
 };
@@ -145,7 +145,7 @@ const PROJECTS: iProjectsItem[] = [
       <ul class="flex flex-wrap gap-2 mb-5 items-center justify-center">
         {project.tags.map((tag) => (
           <li
-            class={`flex font-medium items-center justify-center gap-2 text-sm border  shadow-md py-1.5 px-2 rounded-2xl  ${tag.class}`}
+            class={`flex font-medium items-center justify-center dark:shadow-inner dark:shadow-white/10 gap-2 text-sm  shadow-md py-1.5 px-2 rounded-2xl  ${tag.class}`}
           >
             <tag.icon class="size-6" />
             {tag.name}
