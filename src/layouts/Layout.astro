@@ -5,11 +5,11 @@ import Header from "../components/Header.astro";
 
 // Fonts
 // Supports weights 100-900
-import '@fontsource-variable/onest';
+import "@fontsource-variable/onest";
 
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 const { title, description } = Astro.props;
@@ -17,46 +17,71 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	
-	<body class="relative h-full w-full bg-slate-950">
-		<div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
-		<Header/>
-		<slot />
-		<Footer/>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <body class="relative h-full w-full bg-slate-950" >
+    <!-- fondo oscuro -->
+    <div
+      class="absolute bottom-0 left-0 right-0 top-0 dark:bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] dark:bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
+    >
+    </div>
+    <!-- fondo claro -->
+    <div
+      class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"
+    >
+      <div
+        class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"
+      >
+      </div>
+    </div>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>
 
 <!-- * Global Styles for Astro Project -->
 <style is:global>
-	/* Automatic color scheme follow Browser color scheme */
-	:root {
-		color-scheme: light dark;
-	}
+  /* Automatic color scheme follow Browser color scheme */
+  :root {
+    color-scheme: light dark;
+  }
 
-	html {
-		font-family: 'Onest Variable',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',sans-serif;
-		scroll-behavior: smooth;
-	}
+  html {
+    font-family:
+      "Onest Variable",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
+    scroll-behavior: smooth;
+  }
 
-	body {
-		display: flex;
-		flex-direction: column;
-		/* background-color: #050505 !important; */
-		/* min-height: 100vh; */
-		align-items: center;
-	}
+  body {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #050505 !important; */
+    /* min-height: 100vh; */
+    align-items: center;
+  }
 
-	@media(prefers-reduced-motion: reduce) {
-		html {
-			scroll-behavior: auto;
-		}
-	}
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
 </style>

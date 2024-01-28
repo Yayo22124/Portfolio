@@ -17,17 +17,17 @@ import GitLab from "./icons/GitLab.astro";
 const TAGS: any = {
   TAILWIND: {
     name: "TailwindCSS",
-    class: "bg-white",
+    class: "bg-sky-300/20",
     icon: TailwindCssIcon,
   },
   ANGULAR_15: {
     name: "Angular 15",
-    class: "bg-red-500",
+    class: " text-black",
     icon: AngularIcon,
   },
   ANGULAR_17: {
     name: "Angular 17",
-    class: "bg-white",
+    class: "bg-gradient-to-r from-rose-500 via-fuchsia-500 to-purple-800 text-transparent bg-clip-text",
     icon: AngularIcon,
   },
   JQUERY: {
@@ -37,32 +37,32 @@ const TAGS: any = {
   },
   SASS: {
     name: "Sass",
-    class: "bg-white",
+    class: "bg-rose-300/10 text-rose-700/80",
     icon: SassIcon,
   },
   ASTRO: {
     name: "Astro 4.0",
-    class: "bg-white",
+    class: "bg-black/80 text-white",
     icon: AstroIcon,
   },
   NODE: {
     name: "Node.js",
-    class: "bg-white",
+    class: "bg-green-400/20 text-green-800",
     icon: NodeIcon,
   },
   EXPRESS: {
     name: "Express.js",
-    class: "bg-white",
+    class: "bg-black text-white",
     icon: ExpressIcon,
   },
   MYSQL: {
     name: "MySQL",
-    class: "bg-white",
+    class: "bg-blue-500/10 text-orange-500",
     icon: MySQLIcon,
   },
   SEQUELIZE: {
     name: "Sequelize",
-    class: "bg-white",
+    class: "bg-blue-400/30",
     icon: SequelizeIcon,
   },
 };
@@ -112,11 +112,11 @@ const PROJECTS: iProjectsItem[] = [
         <h3 class="text-2xl text-balance lg:text-3xl md:text-3xl  font-bold text-sky-400/90 mb-2">
           {project.title}
         </h3>
-        <div class="flex gap-1 [&>a]:border [&>a]:border-sky-500/70 [&>a]:shadow-xl [&>a]:bg-sky-500/10 [&>a]:flex [&>a]:gap-4 [&>a]:text-base [&>a]:items-center [&>a]:justify-center [&>a]:mb-2 [&>a]:py-1 [&>a]:px-2 md:[&>a]:py-2 md:[&>a]:px-2.5 [&>a]:rounded-xl">
+        <div class="flex gap-2 [&>a]:border [&>a]:border-sky-500/70 [&>a]:shadow-xl dark:[&>a]:bg-sky-500/10 [&>a]:bg-sky-500/20 [&>a]:flex [&>a]:gap-4 [&>a]:text-base [&>a]:items-center [&>a]:justify-center [&>a]:mb-2 [&>a]:py-1 [&>a]:px-2 md:[&>a]:py-2 md:[&>a]:px-2.5 [&>a]:rounded-xl">
           {project.link && (
             <a
               href={project.link}
-              class="ease-in-out hover:bg-white/10 hover:border-sky-400 delay-250 hover:transition-all hover:scale-105"
+              class="ease-in-out dark:hover:bg-white/10 hover:bg-sky-300/20 dark:hover:border-sky-400 hover:border-sky-300 delay-250 hover:transition-all hover:scale-105"
             >
               <VercelIcon class="size-5 text-white" /> <span>Visit Site</span>
             </a>
@@ -124,7 +124,7 @@ const PROJECTS: iProjectsItem[] = [
           {project.github && (
             <a
               href={project.github}
-              class="ease-in-out hover:bg-white/10 hover:border-sky-400 delay-250 hover:transition-all hover:scale-105"
+              class="ease-in-out dark:hover:bg-white/10 hover:bg-sky-300/20 dark:hover:border-sky-400 hover:border-sky-300 delay-250 hover:transition-all hover:scale-105"
             >
               <GitHub class="size-6 text-white" />
               <span>GitHub Project</span>
@@ -133,7 +133,7 @@ const PROJECTS: iProjectsItem[] = [
           {project.gitlab && (
             <a
               href={project.gitlab}
-              class="ease-in-out hover:bg-white/10 hover:border-sky-400 delay-250 hover:transition-all hover:scale-105"
+              class="ease-in-out dark:hover:bg-white/10 hover:bg-sky-300/20 dark:hover:border-sky-400 hover:border-sky-300 delay-250 hover:transition-all hover:scale-105"
             >
               <GitLab class="size-6 text-white" />
               <span>GitLab Project</span>
@@ -145,7 +145,7 @@ const PROJECTS: iProjectsItem[] = [
       <ul class="flex flex-wrap gap-2 mb-5 items-center justify-center">
         {project.tags.map((tag) => (
           <li
-            class={`flex items-center justify-center gap-2 text-sm border border-white/10 shadow-md bg-white/5 py-1.5 px-2 rounded-2xl hover:scale-110 transition hover:bg-white/10 active:scale-95 ${tag.class}`}
+            class={`flex font-medium items-center justify-center gap-2 text-sm border  shadow-md py-1.5 px-2 rounded-2xl  ${tag.class}`}
           >
             <tag.icon class="size-6" />
             {tag.name}
