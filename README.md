@@ -1,54 +1,121 @@
-# Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
+# Portafolio Web
+
+>[!NOTE]
+>Proyecto en fase de desarrollo
+
+Este es mi proyecto de Portafolio Web para presentarme como desarollador y principalmente hablar sobre mi experiencia demostrando los proyectos que he realizado y mantenido en plataformas como GitHub o GitLab.
+
+El desarrollo de este proyecto personal fue realizado en el framework web de **Astro 4.0**, elegido por su gran flexibiliad y eficiencia para sitios estáticos no tan complejos como para necesitar de un framework/librería más avanzado como Angular o React. Gracias a esto y su fácil uso, es que permite dar una gran experiencia de desarollo y al usuario.
+
+
+## Capturas
+
+![Portfolio_Main_View](./public/portfolio_view.png)
+
+
+## Tech Stack
+
+**Client:** Astro, TailwindCSS, TailwindCSS Animated
+
+**Server:** Node
+
+## Estructura del Proyecto
+
+📦Portfolio
+
+ ┣━ 📂public
+ 
+ ┃ ┣━ 📜favicon.svg
+ 
+ ┃ ┗━ 📜portfolio_view.png
+ 
+ ┣━ 📂src
+ 
+ ┃ ┣━ 📂components
+ 
+ ┃ ┃ ┣━ 📂icons
+ 
+ ┃ ┃ ┃ ┣━ 📜BriefCaseIcon.astro
+ 
+ ┃ ┃ ┃ ┣━ 📜GitHub.astro
+ 
+ ┃ ┃ ┃ ┣━ 📜GitLab.astro
+
+ ┃ ┃ ┃ ┣━ 📜LinkedIn.astro
+ 
+ ┃ ┃ ┃ ┗━ 📜Outlook.astro
+ 
+ ┃ ┃ ┣━ 📜Badge.astro
+ 
+ ┃ ┃ ┣━ 📜Header.astro
+ 
+ ┃ ┃ ┣━ 📜TimeLine.astro
+ 
+ ┃ ┃ ┗━ 📜TimeLineItem.astro
+ 
+ ┃ ┣━ 📂core
+ 
+ ┃ ┃ ┗━ 📂interfaces
+ 
+ ┃ ┃ ┃ ┗━ 📜TimeLineItem.interface.ts
+ 
+ ┃ ┣━ 📂layouts
+ 
+ ┃ ┃ ┗━ 📜Layout.astro
+ 
+ ┃ ┣━ 📂pages
+ 
+ ┃ ┃ ┗━ 📜index.astro
+ 
+ ┃ ┗━ 📜env.d.ts
+ 
+ ┣━ 📜.gitignore
+ 
+ ┣━ 📜astro.config.mjs
+ 
+ ┣━ 📜package.json
+ 
+ ┣━ 📜README.md
+ 
+ ┣━ 📜tailwind.config.mjs
+ 
+ ┗━ 📜tsconfig.json
+ 
+
+
+## Ejecutar Localmente
+
+Clonar proyecto
+
+```bash
+  git clone https://github.com/Yayo22124/Portfolio.git
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Moverse al proyecto
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+  cd Portfolio
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Instalar dependencias
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+  npm install
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+Ejecutar modo desarrollo
 
-## 🧞 Commands
+```bash
+  npm run dev
+```
 
-All commands are run from the root of the project, from a terminal:
+## Autores
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+<div style="width: 80px; display: flex;">
+  
+  <img src="https://avatars.githubusercontent.com/Yayo22124" style="width: 80px;border-radius: 100%;"/>
+  
+  [@Yayo22124](https://www.github.com/Yayo22124)
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+</div> 
