@@ -5,8 +5,11 @@ import OutlookIcon from "../components/icons/Outlook.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import GitLabIcon from "../components/icons/GitLab.astro";
 import BriefCaseIcon from "../components/icons/BriefCaseIcon.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import TimeLine from "../components/TimeLine.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
@@ -14,13 +17,16 @@ import TimeLine from "../components/TimeLine.astro";
   description="Portafolio de Eli Haziel Ortiz (Yayo22124). Estudiante de T.S.U y Desarrollador Web con 2 años de experiencia en proyectos didácticos."
 >
   <main>
-    <section
+    <SectionContainer
       id="home"
-      class="lg:w-1/2 sm:w-11/12 md:w-8/12 w-11/12 mx-auto pt-44 pb-28 animate-fade-right animate-once animate-duration-500 animate-delay-200 animate-ease-in"
     >
       <div class="pb-5 flex flex-col">
-        <div class="flex gap-3 lg:flex-row sm:flex-col-reverse flex-col-reverse  md:flex-col-reverse  mb-5 lg:mb-0 justify-center items-center md:justify-normal sm:justify-normal lg:items-center">
-          <h1 class="lg:text-4xl md:text-3xl sm:text-2xl text-xl font-bold lg:text-balance text-wrap md:text-wrap sm:text-wrap lg:w-2/4 w-full">
+        <div
+          class="flex gap-3 lg:flex-row sm:flex-col-reverse flex-col-reverse md:flex-col-reverse mb-5 lg:mb-0 justify-center items-center md:justify-normal sm:justify-normal lg:items-center"
+        >
+          <h1
+            class="lg:text-4xl md:text-3xl sm:text-2xl text-xl font-bold lg:text-balance text-wrap md:text-wrap sm:text-wrap lg:w-2/4 w-full"
+          >
             Hey, soy <span class="text-sky-400/90"
               >Eli Haziel Ortiz Ramirez</span
             >
@@ -31,7 +37,9 @@ import TimeLine from "../components/TimeLine.astro";
             class="rounded-full lg:size-1/6 md:size-1/4 size-1/3"
           />
         </div>
-        <div class="flex items-center justify-center md:justify-normal lg:justify-normal sm:justify-normal">
+        <div
+          class="flex items-center justify-center md:justify-normal lg:justify-normal sm:justify-normal"
+        >
           <a href="https://www.linkedin.com/in/haziel-ortiz/" target="_blank"
             ><Badge>Disponible para trabajar</Badge></a
           >
@@ -100,17 +108,24 @@ import TimeLine from "../components/TimeLine.astro";
           </a>
         </li>
       </ul>
-    </section>
+    </SectionContainer>
     <!--! TimeLine Section -->
-    <section
+    <SectionContainer
       id="experience"
-      class="w-11/12 mx-auto lg:w-[740px] py-44 animate-fade-left animate-once animate-duration-500 animate-delay-200 animate-ease-in"
     >
       <h2 class="flex items-center gap-x-2 text-3xl font-semibold mb-6">
-        <BriefCaseIcon/> Mi Trayectoria
+        <BriefCaseIcon /> Mi Trayectoria
       </h2>
       <TimeLine />
-    </section>
+    </SectionContainer>
+
+    <!-- ! Projects Section -->
+    <SectionContainer id="projects">
+      <h2 class="flex items-center gap-x-2 text-3xl font-semibold mb-6">
+        <CodeIcon/> Proyectos
+      </h2>
+      <Projects/>
+    </SectionContainer>
   </main>
 </Layout>
 

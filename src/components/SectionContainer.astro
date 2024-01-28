@@ -1,0 +1,11 @@
+---
+ const { class: className  } = Astro.props
+ const defaultStyles = "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300";
+---
+
+<section
+  id={Astro.props.id}
+  class="w-11/12 mx-auto lg:w-[740px] py-44 animate-fade-left animate-once animate-duration-500 animate-delay-200 animate-ease-in"
+>
+    <slot/>
+</section>

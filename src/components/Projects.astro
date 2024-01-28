@@ -1,0 +1,103 @@
+---
+import type iProjectsItem from "../core/interfaces/ProjectsItem.interface.ts";
+import type iTechTag from "../core/interfaces/TechTag.interface.ts";
+import TailwindCssIcon from "./icons/TechTagsIcons/TailwindCssIcon.astro";
+import AngularIcon from "./icons/TechTagsIcons/AngularIcon.astro";
+import jQueryIcon from "./icons/TechTagsIcons/jQueryIcon.astro";
+import VercelIcon from "./icons/TechTagsIcons/VercelIcon.astro";
+import SassIcon from "./icons/TechTagsIcons/SassIcon.astro";
+import GitHub from "./icons/GitHub.astro";
+import GitLab from "./icons/GitLab.astro";
+
+const TAGS: any = {
+  TAILWIND: {
+    name: "TailwindCSS",
+    class: "bg-white",
+    icon: TailwindCssIcon,
+  },
+  ANGULAR_15: {
+    name: "Angular 15",
+    class: "bg-red-500",
+    icon: AngularIcon,
+  },
+  ANGULAR_17: {
+    name: "Angular 17",
+    class: "bg-white",
+    icon: AngularIcon,
+  },
+  JQUERY: {
+    name: "Angular 17",
+    class: "bg-white",
+    icon: jQueryIcon,
+  },
+  SASS: {
+    name: "Sass",
+    class: "bg-white",
+    icon: SassIcon,
+  },
+};
+
+const PROJECTS: iProjectsItem[] = [
+  {
+    title: "Angular Messenger",
+    description:
+      "Aplicación siguiendo la interfaz de Messenger, desarrollada en el framework Angular 15 con el fin de practicar el uso de las directivas básicas como ngIf, ngClass y ngFor, así como algunos componentes de Angular Material como el SnackBar para mostrar notificaciones y manejar estados de los componentes, haciendo una interfaz reactiva.",
+    link: "https://angular-messenger.vercel.app/chats/home",
+    github: "https://github.com/Yayo22124/Angular-Messenger.git",
+    image: "/public/projects/angular_messenger_mockup.webp",
+    tags: [TAGS.TAILWIND, TAGS.ANGULAR_15, TAGS.SASS],
+  },
+];
+---
+
+{
+  PROJECTS.map((project) => (
+    <article class="bg-white/5 shadow-xl border border-sky-300/20 backdrop-blur-sm p-3 rounded-lg">
+      <div class="flex flex-wrap items-center justify-center md:justify-between lg:justify-between gap-1 ">
+        <h3 class="text-2xl text-balance lg:text-3xl md:text-3xl  font-bold text-sky-400/90 mb-2">{project.title}</h3>
+        <div class="flex gap-1 [&>a]:border [&>a]:border-sky-500/70 [&>a]:shadow-xl [&>a]:bg-sky-500/10 [&>a]:flex [&>a]:gap-4 [&>a]:text-base [&>a]:items-center [&>a]:justify-center [&>a]:mb-2 [&>a]:py-1 [&>a]:px-2 md:[&>a]:py-2 md:[&>a]:px-2.5 [&>a]:rounded-xl">
+          <a
+            href={project.link}
+            class="ease-in-out hover:bg-white/10 hover:border-sky-400 delay-250 hover:transition-all hover:scale-105"
+          >
+            <VercelIcon class="size-5 text-white" /> <span>Visit Site</span>
+          </a>
+          {project.github && (
+            <a
+              href={project.github}
+              class="ease-in-out hover:bg-white/10 hover:border-sky-400 delay-250 hover:transition-all hover:scale-105"
+            >
+              <GitHub class="size-6 text-white" />
+              <span>GitHub Project</span>
+            </a>
+          )}
+          {project.gitlab && (
+            <a
+              href={project.gitlab}
+              class="ease-in-out hover:bg-white/10 hover:border-sky-400 delay-250 hover:transition-all hover:scale-105"
+            >
+              <GitLab class="size-6 text-white" />
+              <span>Visit GitLab Project</span>
+            </a>
+          )}
+        </div>
+      </div>
+      <p class="text-lg mb-4 text-pretty">{project.description}</p>
+      <ul class="flex flex-wrap gap-2 mb-5 items-center justify-center">
+        {project.tags.map((tag) => (
+          <li
+            class={`flex items-center justify-center gap-2 text-sm border border-white/10 shadow-md bg-white/5 py-1.5 px-2 rounded-2xl hover:scale-110 transition hover:bg-white/10 active:scale-95 ${tag.class}`}
+          >
+            <tag.icon class="size-6" />
+            {tag.name}
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={project.image}
+        alt={`Imágen del proyecto: ${project.title}`}
+      />
+    </article>
+  ))
+}
