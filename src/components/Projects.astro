@@ -7,18 +7,31 @@ import NodeIcon from "./icons/TechTagsIcons/NodeIcon.astro";
 import SequelizeIcon from "./icons/TechTagsIcons/SequelizeIcon.astro";
 import MySQLIcon from "./icons/TechTagsIcons/MySQLIcon.astro";
 import ExpressIcon from "./icons/TechTagsIcons/ExpressIcon.astro";
+import MongodbIcon from "./icons/TechTagsIcons/MongodbIcon.astro";
 import AstroIcon from "./icons/TechTagsIcons/AstroIcon.astro";
 import jQueryIcon from "./icons/TechTagsIcons/jQueryIcon.astro";
 import VercelIcon from "./icons/TechTagsIcons/VercelIcon.astro";
 import SassIcon from "./icons/TechTagsIcons/SassIcon.astro";
 import GitHub from "./icons/GitHub.astro";
 import GitLab from "./icons/GitLab.astro";
+import TypeScriptIcon from "./icons/TechTagsIcons/TypeScriptIcon.astro";
+import JavaScriptIcon from "./icons/TechTagsIcons/JavaScriptIcon.astro";
 
 const TAGS: any = {
   TAILWIND: {
     name: "TailwindCSS",
     class: "bg-sky-300/20 dark:bg-cyan-500/30 dark:text-white text-cyan-600",
     icon: TailwindCssIcon,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-sky-300/20 dark:bg-blue-500/40 dark:text-white text-blue-500",
+    icon: TypeScriptIcon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-yellow-300/30 dark:bg-yellow-300/30 dark:text-white text-black",
+    icon: JavaScriptIcon,
   },
   ANGULAR_15: {
     name: "Angular 15",
@@ -45,10 +58,20 @@ const TAGS: any = {
     class: "bg-black/80 text-white dark:bg-black/60",
     icon: AstroIcon,
   },
+  VERCEL: {
+    name: "Vercel",
+    class: "bg-black/80 text-white dark:bg-black/60",
+    icon: VercelIcon,
+  },
   NODE: {
     name: "Node.js",
     class: "bg-green-400/20 text-green-800 dark:text-white",
     icon: NodeIcon,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-green-400/20 text-green-800 dark:text-white",
+    icon: MongodbIcon,
   },
   EXPRESS: {
     name: "Express.js",
@@ -75,7 +98,7 @@ const PROJECTS: iProjectsItem[] = [
     link: "https://angular-messenger.vercel.app/chats/home",
     github: "https://github.com/Yayo22124/Angular-Messenger.git",
     image: "img/projects/angular_messenger_mockup.webp",
-    tags: [TAGS.TAILWIND, TAGS.ANGULAR_15, TAGS.SASS],
+    tags: [TAGS.TAILWIND, TAGS.ANGULAR_15, TAGS.TYPESCRIPT, TAGS.SASS, TAGS.VERCEL],
   },
   {
     title: "Angular App Messages",
@@ -84,7 +107,7 @@ const PROJECTS: iProjectsItem[] = [
     link: "https://angular-messenger.vercel.app/chats/home",
     gitlab: "https://gitlab.com/Yayo22124/AppMessages.git",
     image: "img/projects/angular_app_messages_mockup.webp",
-    tags: [TAGS.ANGULAR_17, TAGS.TAILWIND, TAGS.SASS],
+    tags: [TAGS.ANGULAR_17, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.SASS, TAGS.VERCEL],
   },
   {
     title: "Astro Portfolio",
@@ -93,14 +116,14 @@ const PROJECTS: iProjectsItem[] = [
     link: "https://yayo22124.vercel.app",
     github: "https://github.com/Yayo22124/Portfolio.git",
     image: "img/projects/astro_portfolio_mockup.webp",
-    tags: [TAGS.ASTRO, TAGS.TAILWIND],
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.VERCEL],
   },
   {
     title: "Agéndalo",
     description:
       "Proyecto universitario para desarrollar una aplicación con el objetivo de funcionar como proyecto de estadía. Desarrollada en Angular 15, Angular Material, TailwindCSS y hace uso de la librería Angular HTTPClient para comunicarse con la API REST creada en Node.js usando Express.js, Sequelize y MySQL.",
     image: "img/projects/agendalo_mockup.webp",
-    tags: [TAGS.ANGULAR_15, TAGS.TAILWIND, TAGS.NODE, TAGS.EXPRESS, TAGS.MYSQL, TAGS.SEQUELIZE],
+    tags: [TAGS.ANGULAR_15, TAGS.TAILWIND, TAGS.NODE, TAGS.JAVASCRIPT, TAGS.EXPRESS, TAGS.MYSQL, TAGS.SEQUELIZE, TAGS.VERCEL],
   },
 ];
 ---
