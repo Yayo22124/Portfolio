@@ -11,7 +11,7 @@ El desarrollo de este proyecto personal fue realizado en el framework web de **A
 
 ## Capturas
 
-![Portfolio_Main_View](./public/portfolio_view.png)
+![Portfolio_Main_View](./public/img/portfolio_mockup.png)
 
 
 ## Tech Stack
