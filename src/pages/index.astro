@@ -7,6 +7,7 @@ import GitLabIcon from "../components/icons/GitLab.astro";
 import BriefCaseIcon from "../components/icons/BriefCaseIcon.astro";
 import CodeIcon from "../components/icons/CodeIcon.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import CvIcon from "../components/CvIcon.astro";
 import TimeLine from "../components/TimeLine.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Projects from "../components/Projects.astro";
@@ -17,9 +18,7 @@ import Projects from "../components/Projects.astro";
   description="Portafolio de Eli Haziel Ortiz (Yayo22124). Estudiante de T.S.U y Desarrollador Web con 2 años de experiencia en proyectos didácticos."
 >
   <main>
-    <SectionContainer
-      id="home"
-    >
+    <SectionContainer id="home">
       <div class="pb-5 flex flex-col">
         <div
           class="flex gap-3 lg:flex-row sm:flex-col-reverse flex-col-reverse md:flex-col-reverse mb-5 lg:mb-0 justify-center items-center md:justify-normal sm:justify-normal lg:items-center"
@@ -107,12 +106,23 @@ import Projects from "../components/Projects.astro";
             <span>ya-yo22124@outlook.com</span>
           </a>
         </li>
+        <!-- CV -->
+        <li
+          class="hover:scale-110 transition hover:bg-white/10 active:scale-95 flex items-center justify-center"
+        >
+          <a
+            href="docs/Eli-Haziel-Ortiz-Ramirez-CV.pdf"
+            download="Eli-Haziel-Ortiz-Ramirez-CV.pdf"
+            class="flex gap-2 items-center justify-center"
+          >
+            <CvIcon class="size-6" />
+            <span>Descargar CV</span>
+          </a>
+        </li>
       </ul>
     </SectionContainer>
     <!--! TimeLine Section -->
-    <SectionContainer
-      id="experience"
-    >
+    <SectionContainer id="experience">
       <h2 class="flex items-center gap-x-2 text-3xl font-semibold mb-6">
         <BriefCaseIcon /> Mi Trayectoria
       </h2>
@@ -122,9 +132,9 @@ import Projects from "../components/Projects.astro";
     <!-- ! Projects Section -->
     <SectionContainer id="projects">
       <h2 class="flex items-center gap-x-2 text-3xl font-semibold mb-6">
-        <CodeIcon/> Proyectos
+        <CodeIcon /> Proyectos
       </h2>
-      <Projects/>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>

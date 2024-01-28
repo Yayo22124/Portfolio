@@ -3,6 +3,11 @@ import type iProjectsItem from "../core/interfaces/ProjectsItem.interface.ts";
 import type iTechTag from "../core/interfaces/TechTag.interface.ts";
 import TailwindCssIcon from "./icons/TechTagsIcons/TailwindCssIcon.astro";
 import AngularIcon from "./icons/TechTagsIcons/AngularIcon.astro";
+import NodeIcon from "./icons/TechTagsIcons/NodeIcon.astro";
+import SequelizeIcon from "./icons/TechTagsIcons/SequelizeIcon.astro";
+import MySQLIcon from "./icons/TechTagsIcons/MySQLIcon.astro";
+import ExpressIcon from "./icons/TechTagsIcons/ExpressIcon.astro";
+import AstroIcon from "./icons/TechTagsIcons/AstroIcon.astro";
 import jQueryIcon from "./icons/TechTagsIcons/jQueryIcon.astro";
 import VercelIcon from "./icons/TechTagsIcons/VercelIcon.astro";
 import SassIcon from "./icons/TechTagsIcons/SassIcon.astro";
@@ -35,6 +40,31 @@ const TAGS: any = {
     class: "bg-white",
     icon: SassIcon,
   },
+  ASTRO: {
+    name: "Astro 4.0",
+    class: "bg-white",
+    icon: AstroIcon,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-white",
+    icon: NodeIcon,
+  },
+  EXPRESS: {
+    name: "Express.js",
+    class: "bg-white",
+    icon: ExpressIcon,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-white",
+    icon: MySQLIcon,
+  },
+  SEQUELIZE: {
+    name: "Sequelize",
+    class: "bg-white",
+    icon: SequelizeIcon,
+  },
 };
 
 const PROJECTS: iProjectsItem[] = [
@@ -44,24 +74,53 @@ const PROJECTS: iProjectsItem[] = [
       "Aplicación siguiendo la interfaz de Messenger, desarrollada en el framework Angular 15 con el fin de practicar el uso de las directivas básicas como ngIf, ngClass y ngFor, así como algunos componentes de Angular Material como el SnackBar para mostrar notificaciones y manejar estados de los componentes, haciendo una interfaz reactiva.",
     link: "https://angular-messenger.vercel.app/chats/home",
     github: "https://github.com/Yayo22124/Angular-Messenger.git",
-    image: "projects/angular_messenger_mockup.webp",
+    image: "img/projects/angular_messenger_mockup.webp",
     tags: [TAGS.TAILWIND, TAGS.ANGULAR_15, TAGS.SASS],
+  },
+  {
+    title: "Angular App Messages",
+    description:
+      "Aplicación maquetada usando un diseño de Figma para simular una pequeña aplicación para mandar mensajes usando Angular 17. Esta apliación tiene el objetivo de poder enviar y almacenar mensajes en un contexto de ideas de proyectos, para esto se usó el LocalStorage, componentes de Angular Material, animaciones de TailwindCSS Animated y formularios reactivos, así como servicios de angular para guardar los mensajes.",
+    link: "https://angular-messenger.vercel.app/chats/home",
+    gitlab: "https://gitlab.com/Yayo22124/AppMessages.git",
+    image: "img/projects/angular_app_messages_mockup.webp",
+    tags: [TAGS.ANGULAR_17, TAGS.TAILWIND, TAGS.SASS],
+  },
+  {
+    title: "Astro Portfolio",
+    description:
+      "Mi portafolio de desarollador web para presentarme a mi y mis proyectos que he creado para aprender a dominar tecnologías. Este proyecto es actualmente responsivo y muy eficiente contando con el excelente framework para sitios estáticos de Astro 4.0, con el cual la eficiencia y carga no son un problema, contando además con optimización de imágenes usando la plataforma Squoosh y para estilizar se utilizó TailwindCSS.",
+    link: "https://yayo22124.vercel.app",
+    github: "https://github.com/Yayo22124/Portfolio.git",
+    image: "img/projects/astro_portfolio_mockup.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND],
+  },
+  {
+    title: "Agéndalo",
+    description:
+      "Proyecto universitario para desarrollar una aplicación con el objetivo de funcionar como proyecto de estadía. Desarrollada en Angular 15, Angular Material, TailwindCSS y hace uso de la librería Angular HTTPClient para comunicarse con la API REST creada en Node.js usando Express.js, Sequelize y MySQL.",
+    image: "img/projects/agendalo_mockup.webp",
+    tags: [TAGS.ANGULAR_15, TAGS.TAILWIND, TAGS.NODE, TAGS.EXPRESS, TAGS.MYSQL, TAGS.SEQUELIZE],
   },
 ];
 ---
 
 {
   PROJECTS.map((project) => (
-    <article class="bg-white/5 shadow-xl border border-sky-300/20 backdrop-blur-sm p-3 rounded-lg">
+    <article class="bg-white/5 shadow-xl border border-sky-300/20 backdrop-blur-sm p-3 rounded-lg mb-8">
       <div class="flex flex-wrap items-center justify-center md:justify-between lg:justify-between gap-1 ">
-        <h3 class="text-2xl text-balance lg:text-3xl md:text-3xl  font-bold text-sky-400/90 mb-2">{project.title}</h3>
+        <h3 class="text-2xl text-balance lg:text-3xl md:text-3xl  font-bold text-sky-400/90 mb-2">
+          {project.title}
+        </h3>
         <div class="flex gap-1 [&>a]:border [&>a]:border-sky-500/70 [&>a]:shadow-xl [&>a]:bg-sky-500/10 [&>a]:flex [&>a]:gap-4 [&>a]:text-base [&>a]:items-center [&>a]:justify-center [&>a]:mb-2 [&>a]:py-1 [&>a]:px-2 md:[&>a]:py-2 md:[&>a]:px-2.5 [&>a]:rounded-xl">
-          <a
-            href={project.link}
-            class="ease-in-out hover:bg-white/10 hover:border-sky-400 delay-250 hover:transition-all hover:scale-105"
-          >
-            <VercelIcon class="size-5 text-white" /> <span>Visit Site</span>
-          </a>
+          {project.link && (
+            <a
+              href={project.link}
+              class="ease-in-out hover:bg-white/10 hover:border-sky-400 delay-250 hover:transition-all hover:scale-105"
+            >
+              <VercelIcon class="size-5 text-white" /> <span>Visit Site</span>
+            </a>
+          )}
           {project.github && (
             <a
               href={project.github}
@@ -77,7 +136,7 @@ const PROJECTS: iProjectsItem[] = [
               class="ease-in-out hover:bg-white/10 hover:border-sky-400 delay-250 hover:transition-all hover:scale-105"
             >
               <GitLab class="size-6 text-white" />
-              <span>Visit GitLab Project</span>
+              <span>GitLab Project</span>
             </a>
           )}
         </div>
