@@ -130,12 +130,12 @@ const PROJECTS: iProjectsItem[] = [
 
 {
   PROJECTS.map((project) => (
-    <article class="bg-white/5 shadow-xl border border-sky-300/20 backdrop-blur-sm p-3 rounded-lg mb-8">
+    <article class="dark:bg-gray-500/10 bg-white/10 shadow-xl border border-sky-300/20 backdrop-blur-xl p-3 rounded-lg mb-8">
       <div class="flex flex-wrap items-center justify-center md:justify-between lg:justify-between gap-1 ">
         <h3 class="text-2xl text-balance lg:text-3xl md:text-3xl  font-bold text-sky-400/90 mb-2">
           {project.title}
         </h3>
-        <div class="flex gap-2 [&>a]:border [&>a]:border-sky-500/70 [&>a]:shadow-xl dark:[&>a]:bg-sky-500/10 [&>a]:bg-sky-500/20 [&>a]:flex [&>a]:gap-4 [&>a]:text-base [&>a]:items-center [&>a]:justify-center [&>a]:mb-2 [&>a]:py-1 [&>a]:px-2 md:[&>a]:py-2 md:[&>a]:px-2.5 [&>a]:rounded-xl">
+        <div class="flex gap-2 [&>a]:border [&>a]:border-sky-500/70 [&>a]:shadow-xl dark:[&>a]:bg-sky-500/10 [&>a]:bg-sky-500/20 [&>a]:flex [&>a]:gap-4 [&>a]:text-base [&>a]:items-center [&>a]:justify-center [&>a]:backdrop-blur-md [&>a]:mb-2 [&>a]:py-1 [&>a]:px-2 md:[&>a]:py-2 md:[&>a]:px-2.5 [&>a]:rounded-xl">
           {project.link && (
             <a
               href={project.link}
@@ -168,9 +168,9 @@ const PROJECTS: iProjectsItem[] = [
       <ul class="flex flex-wrap gap-2 mb-5 items-center justify-center">
         {project.tags.map((tag) => (
           <li
-            class={`flex font-medium items-center justify-center dark:shadow-inner dark:shadow-white/10 gap-2 text-sm  shadow-md py-1.5 px-2 rounded-2xl  ${tag.class}`}
+            class={`flex font-medium items-center justify-center dark:shadow-inner dark:shadow-white/10 gap-2 text-xs  shadow-md py-1.5 px-2 rounded-2xl  ${tag.class}`}
           >
-            <tag.icon class="size-6" />
+            <tag.icon class="size-5" />
             {tag.name}
           </li>
         ))}
